@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="de" ng-app>
+<html lang="de" ng-app="locationApp">
 
 <head>
     <meta charset="utf-8">
     <title>My Angular Site</title>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
     <script src="js/controllers.js"></script>
 </head>
 
 <body>
-    <div class="container" ng-controller="LocationController">
-        <h2>Locations</h2>
-        <ul>
-            <li ng-repeat="location in locations">
-                {{location.postCode}} {{location.city}}
-            </li>
-        </ul>
-    </div>
-
+    <ng-view></ng-view>
 </body>
 
 </html>
